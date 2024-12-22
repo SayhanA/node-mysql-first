@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Essential Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register at our coffee shop to enjoy freshly brewed coffee, exclusive offers, and a personalized experience. Sign up now!"
+    />
+    <meta name="author" content="Your Coffee Shop Name" />
+    <meta
+      name="keywords"
+      content="Coffee shop, registration, sign up, coffee, best coffee, coffee offers"
+    />
+
+    <!-- Title -->
+    <title><%= pageTitle %> | Your Coffee Shop</title>
+
+    <!-- Social Media Optimization (Open Graph Tags) -->
+    <meta property="og:title" content="Register | Your Coffee Shop" />
+    <meta
+      property="og:description"
+      content="Join our coffee community and enjoy exclusive offers. Sign up today!"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/registration.css" />
+  </head>
+  <body>
+    <main>
+      <img
+        class="side_img"
+        src="/images/coffee-login.jpg"
+        srcset="
+          /images/man-pouring-coffee-into-mug-small.jpg  480w,
+          /images/coffee-login.jpg                      1200w
+        "
+        sizes="(max-width: 600px) 480px, 1200px"
+        alt="A man pouring coffee into a mug"
+        title="Pouring freshly brewed coffee"
+        loading="lazy"
+      />
+
+      <div class="form_container">
+        <h1>Welcome back to Coffee Shop</h1>
+        <%- error ? `
+        <p class="error">${error}</p>
+        ` : `<p>
+            Sign up to enjoy our freshly brewed coffee and exclusive member
+            benefits.
+          </p>` %>
+        <form action="/registration" method="POST">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="name"
+            placeholder="Your name"
+            value="<%= props ? props.name : '' %>"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            value="<%= props ? props.email : '' %>"
+            placeholder="Your email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="new-password"
+            placeholder="Password"
+            value="<%= props ? props.password : '' %>"
+            required
+          />
+          <input
+            type="password"
+            name="confirm_password"
+            id="confirm_password"
+            autocomplete="new-password"
+            placeholder="Confirm password"
+            value="<%= props ? props.confirm_password : '' %>"
+            required
+          />
+          <button type="submit">Register Now</button>
+          <p>Already have an account? <a href="/login">Login</a></p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

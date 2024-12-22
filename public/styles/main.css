@@ -1,0 +1,28 @@
+:root {
+  -primary: rgb(2, 83, 67);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.error{
+  color: red;
+}
+
+input{
+  padding: 10px;
+}
+
+button{
+  padding: 5px;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: aliceblue;
+}

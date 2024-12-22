@@ -1,0 +1,26 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+main > img{
+    height: 100vh;
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main > form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  align-items: center;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
