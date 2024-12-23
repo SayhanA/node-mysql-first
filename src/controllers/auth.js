@@ -85,7 +85,7 @@ const postLogout = (req, res) => {
       return res.redirect("/");
     }
     res.clearCookie("connect.sid");
-    res.redirect("/login");
+    res.redirect("/");
   });
 };
 

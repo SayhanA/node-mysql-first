@@ -2,17 +2,30 @@
 <body>
   <header>
     <nav>
+        <div class="logo">
+            <h1>COFE</h1>
+            <p>Coffee Lovers</p>
+        </div>
+        
       <ul>
         <li><a href="/home">Home</a></li>
         <li><a href="/menu">Menu</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
-    </nav>
+    </ul>
+    <!-- <a href="/login">Login</a>
     <form action="/logout" method="POST">
       <button type="submit">Logout</button>
-    </form>
+    </form> -->
+    <% if (user) { %>
+        <form action="/logout" method="POST">
+          <button type="submit">Logout</button>
+        </form>
+      <% } else { %>
+        <a href="/login">Login</a>
+      <% } %>
+      
+</nav>
   </header>
   
   <main>

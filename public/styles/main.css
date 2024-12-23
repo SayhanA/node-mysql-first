@@ -9,6 +9,14 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
 .error{
   color: red;
 }
@@ -25,4 +33,35 @@ body{
     min-height: 100vh;
     min-width: 100vw;
     background-color: aliceblue;
+}
+
+header{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.434);
+  position: sticky;
+}
+
+nav{
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo{
+  text-align: center;
+  color: white;
+}
+
+nav > ul{
+  display: flex;
+  gap: 20px;
+}
+
+nav a{
+  color: white;
 }
