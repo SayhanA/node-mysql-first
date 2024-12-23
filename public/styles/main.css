@@ -17,6 +17,11 @@ a{
   text-decoration: none;
 }
 
+.active{
+  border: 0;
+  border-bottom: 2px solid white;
+}
+
 .error{
   color: red;
 }
@@ -52,16 +57,38 @@ nav{
   color: white;
 }
 
+nav > div{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 .logo{
   text-align: center;
   color: white;
 }
 
-nav > ul{
+nav > div > ul{
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 nav a{
   color: white;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+
+nav button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+
+.user_logo{
+  height: 30px;
 }
