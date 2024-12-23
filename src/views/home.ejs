@@ -1,18 +1,42 @@
 <%- include("./includes/head.ejs") %>
-<link rel="stylesheet" href="/styles/home.css" />
+<link rel="stylesheet" href="./styles/home.css" />
 <%- include("./includes/nav.ejs") %>
 <section class="hero">
+  <div class="hero_content">
+    <div class="hero-text">
+      <h1>Enjoy your happy moment with a cup of coffee.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam
+        consectetur quibusdam earum sequi, rem unde facere labore modi libero
+        commodi obcaecati minima voluptatum. Numquam veritatis eveniet sapiente
+        corrupti earum.
+      </p>
+      <a href="/menu" class="btn-primary"
+        >See Our Menu
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
   <img
-    src="/images/coffee-shop-hero.jpg"
+    class="hero_img"
+    src="/images/full-screen/hero-coffee.jpg"
     alt="Welcome to Your Coffee Shop"
     title="Enjoy the best coffee in town"
     loading="lazy"
   />
-  <div class="hero-text">
-    <h1>Welcome to Your Coffee Shop</h1>
-    <p>Where every cup is a story</p>
-    <a href="/menu" class="btn-primary">See Our Menu</a>
-  </div>
 </section>
 
 <section class="about-us">

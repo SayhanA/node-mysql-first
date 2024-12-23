@@ -6,80 +6,92 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
-li{
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.active{
+.active {
   border: 0;
   border-bottom: 2px solid white;
 }
 
-.error{
+.error {
   color: red;
 }
 
-input{
+input {
   padding: 10px;
 }
 
-button{
+button {
   padding: 5px;
 }
 
-body{
-    min-height: 100vh;
-    min-width: 100vw;
-    background-color: aliceblue;
+body {
+  /* min-height: 100vh;
+    min-width: 100vw; */
+  background-color: aliceblue;
 }
 
-header{
+header {
+  width: 100%;
   display: flex;
   background-color: rgba(0, 0, 0, 0.434);
-  position: sticky;
+  position: fixed;
+  z-index: 100000;
 }
 
-nav{
+nav {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
 }
 
-nav > div{
+nav > div {
   display: flex;
   align-items: center;
   gap: 50px;
 }
 
-.logo{
+.logo {
   text-align: center;
   color: white;
 }
 
-nav > div > ul{
+nav > div > ul {
   display: flex;
   gap: 30px;
 }
 
-nav a{
+nav h1 {
+  font-size: 35px;
+}
+
+nav a {
   color: white;
   /* font-weight: bold; */
   font-size: 18px;
 }
 
-nav button{
+nav > a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -87,8 +99,24 @@ nav button{
   justify-content: center;
   align-items: center;
   border: 0;
+  background-color: transparent;
 }
 
-.user_logo{
+nav button svg {
+  color: white;
+}
+
+.user_logo {
   height: 30px;
+  cursor: pointer;
+}
+
+.shop_svg {
+  width: 30px;
+  cursor: pointer;
+}
+
+.shop_svg:hover,
+.user_logo:hover {
+  color: yellow;
 }
