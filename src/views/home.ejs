@@ -1,0 +1,49 @@
+<%- include("./includes/head.ejs") %>
+<link rel="stylesheet" href="/styles/home.css" />
+<%- include("./includes/nav.ejs") %>
+<section class="hero">
+  <img
+    src="/images/coffee-shop-hero.jpg"
+    alt="Welcome to Your Coffee Shop"
+    title="Enjoy the best coffee in town"
+    loading="lazy"
+  />
+  <div class="hero-text">
+    <h1>Welcome to Your Coffee Shop</h1>
+    <p>Where every cup is a story</p>
+    <a href="/menu" class="btn-primary">See Our Menu</a>
+  </div>
+</section>
+
+<section class="about-us">
+  <h2>About Us</h2>
+  <p>
+    At Your Coffee Shop, we believe in the art of brewing coffee. Our baristas
+    are skilled artisans who craft each cup with care and precision. Whether
+    you're looking for a quiet place to work, a cozy spot to relax, or a great
+    coffee experience, you'll find it here.
+  </p>
+  <a href="/about" class="btn-secondary">Learn More</a>
+</section>
+
+<section class="specials">
+  <h2>Today's Specials</h2>
+  <div class="specials-grid">
+    <div class="special-item">
+      <img src="/images/special-coffee-1.jpg" alt="Special Coffee 1" />
+      <h3>Latte Art</h3>
+      <p>Enjoy our barista's beautiful latte art creations.</p>
+    </div>
+    <div class="special-item">
+      <img src="/images/special-coffee-2.jpg" alt="Special Coffee 2" />
+      <h3>Cold Brew</h3>
+      <p>Try our refreshing cold brew, perfect for hot days.</p>
+    </div>
+    <div class="special-item">
+      <img src="/images/special-coffee-3.jpg" alt="Special Coffee 3" />
+      <h3>Mocha</h3>
+      <p>A delicious blend of coffee and chocolate.</p>
+    </div>
+  </div>
+</section>
+<%- include("./includes/end.ejs") %>

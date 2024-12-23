@@ -53,19 +53,17 @@ const postLogin = (req, res, next) => {
     .then(([data, fieldData]) => {
       if (data.length > 0) {
         if (data[0].password === req.body.password) {
-
           req.session.user = {
-            id:data[0].id,
+            id: data[0].id,
             email: data[0].email,
-            name: data[0].name
-          }
-          
+            name: data[0].name,
+          };
+
           res.redirect("/");
         } else {
           res.render("login", {
-            props: { email: req.body.email, password:"" },
-            error:
-              "Your password is not valid. Try again.",
+            props: { email: req.body.email, password: "" },
+            error: "Your password is not valid. Try again.",
             pageTitle: "Login",
           });
         }
@@ -81,4 +79,14 @@ const postLogin = (req, res, next) => {
     .catch((err) => console.log(err));
 };
 
-module.exports = { getLogin, getRegistration, postRegistration, postLogin };
+const postLogout = (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.redirect("/");
+    }
+    res.clearCookie("connect.sid");
+    res.redirect("/login");
+  });
+};
+
+module.exports = { getLogin, getRegistration, postRegistration, postLogin, postLogout };
