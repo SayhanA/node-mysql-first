@@ -15,7 +15,7 @@
     />
 
     <!-- Title -->
-    <title>Login | Your Coffee Shop</title>
+    <title><%= pageTitle %> | Your Coffee Shop</title>
 
     <!-- Social Media Optimization (Open Graph Tags) -->
     <meta property="og:title" content="Register | Your Coffee Shop" />
@@ -28,34 +28,59 @@
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/registration.css" />
+    <link rel="stylesheet" href="/styles/login.css" />
   </head>
   <body>
     <main>
       <img
         class="side_img"
-        src="../images/coffee-login.jpg"
-        alt="A man purring coffee in a mag."
+        src="/images/coffee-login.jpg"
+        srcset="
+          /images/man-pouring-coffee-into-mug-small.jpg  480w,
+          /images/coffee-login.jpg                      1200w
+        "
+        sizes="(max-width: 600px) 480px, 1200px"
+        alt="A man pouring coffee into a mug"
+        title="Pouring freshly brewed coffee"
+        loading="lazy"
       />
-      <div class="form_container">
-        <h1>Welcome to the website.</h1>
-        <p>Discover the different culture of the coffee world with Coffee Shop.</p>
-        <form action="/auth/login" method="POST">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            autocomplete="email"
-            placeholder="Your email"
-          />
 
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete="password"
-            placeholder="Password"
-          />
+      <div class="form_container">
+        <h1>Welcome back to Coffee Shop</h1>
+        <%- error ? `
+        <p class="error">${error}</p>
+        ` : `
+        <p>
+          Discover the different culture of the coffee world with Coffee Shop.
+        </p>
+        ` %>
+        <form action="/login" method="POST">
+          <div class="email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              value="<%= props ? props.email : '' %>"
+              placeholder="Your email"
+              required
+            />
+            <p class="error">Please provide a valid email.</p>
+          </div>
+          <div class="password">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autocomplete="new-password"
+              placeholder="Password"
+              value="<%= props ? props.password : '' %>"
+              minlength="6"
+              maxlength="12"
+              required
+            />
+            <p class="error">Password must be at least 6 characters.</p>
+          </div>
 
           <button type="submit">Login</button>
           <p>Don't have an account? <a href="/registration">Sign Up</a></p>

@@ -12,11 +12,12 @@ const app = express();
 
 db.execute("SELECT * FROM `node-complete`.users");
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "../public")));
+
 app.set("view engine", "ejs");
 app.set("views", "src/views");
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "../public")));
 app.use("/", authRoute);
 app.use(errorRoute);
 

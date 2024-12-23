@@ -4,9 +4,26 @@ main {
   display: flex;
 }
 
-.error{
+.error {
+  margin: 5px 0 0 0;
   color: red !important;
   font-weight: bold;
+  transition: all .5s;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+input + p{
+  display: none;
+  transition: all .5s;
+}
+
+input:invalid:not(:placeholder-shown) + p {
+  display: block;
+  font-size: small;
 }
 
 .side_img {
@@ -15,41 +32,54 @@ main {
   object-position: center;
 }
 
-.form_container{
-    margin: auto;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    gap: 30px;
-    text-align: center;
+.form_container {
+  margin: auto;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 30px;
+  text-align: center;
 }
 
 .form_container > form {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
 }
 
-input, button{
-    padding: 15px;
-    width: 100%;
-    display: block;
-    border: 0;
-    outline: 0;
+input,
+button {
+  padding: 15px;
+  width: 100%;
+  display: block;
+  border: 0;
+  outline: 0;
 }
 
-button:hover{
-    background-color: rgb(1, 76, 1);
-    color: white;
-    font-weight: bold;
-    border-radius: 3px;
-    cursor: pointer;
+button:hover {
+  background-color: rgb(1, 76, 1);
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-.form_container > p{
+.form_container > p {
   color: gray;
+}
+
+.confirm_password,
+.password,
+.email {
+  width: 100%;
+  text-align: left;
+}
+
+input:invalid ~ button[type="submit"] {
+  opacity: 0.6;
+  pointer-events: none;
 }

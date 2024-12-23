@@ -49,10 +49,12 @@
         <h1>Welcome back to Coffee Shop</h1>
         <%- error ? `
         <p class="error">${error}</p>
-        ` : `<p>
-            Sign up to enjoy our freshly brewed coffee and exclusive member
-            benefits.
-          </p>` %>
+        ` : `
+        <p>
+          Sign up to enjoy our freshly brewed coffee and exclusive member
+          benefits.
+        </p>
+        ` %>
         <form action="/registration" method="POST">
           <input
             type="text"
@@ -63,33 +65,46 @@
             value="<%= props ? props.name : '' %>"
             required
           />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            autocomplete="email"
-            value="<%= props ? props.email : '' %>"
-            placeholder="Your email"
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete="new-password"
-            placeholder="Password"
-            value="<%= props ? props.password : '' %>"
-            required
-          />
-          <input
-            type="password"
-            name="confirm_password"
-            id="confirm_password"
-            autocomplete="new-password"
-            placeholder="Confirm password"
-            value="<%= props ? props.confirm_password : '' %>"
-            required
-          />
+          <div class="email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              value="<%= props ? props.email : '' %>"
+              placeholder="Your email"
+              required
+            />
+            <p class="error">Please provide a valid email.</p>
+          </div>
+          <div class="password">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autocomplete="new-password"
+              placeholder="Password"
+              value="<%= props ? props.password : '' %>"
+              minlength="6"
+              maxlength="12"
+              required
+            />
+            <p class="error">Password must be at least 6 characters.</p>
+          </div>
+          <div class="confirm_password">
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              autocomplete="new-password"
+              placeholder="Confirm password"
+              value="<%= props ? props.confirm_password : '' %>"
+              minlength="6"
+              maxlength="12"
+              required
+            />
+            <p class="error">Password must be at least 6 characters.</p>
+          </div>
           <button type="submit">Register Now</button>
           <p>Already have an account? <a href="/login">Login</a></p>
         </form>
