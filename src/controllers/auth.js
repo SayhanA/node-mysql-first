@@ -49,11 +49,17 @@ const getLogin = (req, res, next) => {
 };
 
 const postLogin = (req, res, next) => {
-  console.log(req.body);
   User.getUserByEmail(req.body.email)
     .then(([data, fieldData]) => {
       if (data.length > 0) {
         if (data[0].password === req.body.password) {
+
+          req.session.user = {
+            id:data[0].id,
+            email: data[0].email,
+            name: data[0].name
+          }
+          
           res.redirect("/");
         } else {
           res.render("login", {

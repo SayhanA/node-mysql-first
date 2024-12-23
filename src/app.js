@@ -7,8 +7,18 @@ const PORT = process.env.PORT || 8000;
 
 const authRoute = require("./routes/auth");
 const errorRoute = require("./routes/error");
+const session = require("express-session");
 
 const app = express();
+
+app.use(
+  session({
+    secret: "your-secret-key",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false },
+  })
+);
 
 db.execute("SELECT * FROM `node-complete`.users");
 
