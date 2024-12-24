@@ -1,3 +1,7 @@
+:root {
+  --secondary: #c0aa83;
+}
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -23,49 +27,210 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
-.hero-text{
-    color: white;
-    width: 63%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-flow: column nowrap;
+.hero-text {
+  color: white;
+  width: 63%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
 }
 
-.hero-text h1{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    font-size: 50px;
-    line-height: 70px;
+.hero-text h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  line-height: 70px;
+  color: var(--bins);
 }
 
-.hero-text p{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    line-height: 30px;
-    max-width: 80%;
-    margin: 40px 0 20px 0;
-    font-size: 20px;
+.hero-text p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  max-width: 80%;
+  margin: 40px 0 20px 0;
+  font-size: 20px;
 }
 
-.hero-text a{
-    width: 300px;
-    height: 50px;
-    margin: 40px 0 0 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.btn-primary {
+  width: 300px;
+  height: 50px;
+  margin: 40px 0 0 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-primary:hover {
+  gap: 30px;
+  color: var(--bins) !important;
+}
+
+.hero-text svg {
+  width: 30px;
+}
+
+/* about-us */
+.about-us {
+  width: 100%;
+  background-color: #171614;
+  color: white;
+}
+
+.about-us-contents {
+  max-width: 1400px;
+  padding: 130px 0;
+  margin: auto;
+  display: flex;
+  flex-flow: row;
+  gap: 40px;
+}
+
+.section_description {
+  width: 45%;
+}
+
+.section_title {
+  margin: 0 0 40px 0;
+}
+
+.section_title > p {
+  padding: 0 0 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--bins);
+}
+
+.section_description > p {
+  font-size: 18px;
+  max-width: 90%;
+}
+
+.section_description p {
+  max-width: 90%;
+  line-height: 25px;
+}
+
+.section_details {
+  width: 53%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.section_details > div {
+  padding: 20px;
+  max-width: 50%;
+}
+
+.section_details > div > img {
+  margin-bottom: 20px;
+}
+
+.section_details > div > h4 {
+  padding: 0 0 10px 0;
+  font-size: 20px;
+  color: var(--bins);
+}
+
+/* recent_products section */
+.recent_products {
+  width: 100%;
+  padding: 120px 0;
+  color: white;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+.section_title {
+  position: relative;
+}
+
+.shadow {
+  font-size: 170px;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.05;
+}
+
+.section_content {
+  padding-top: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.cart {
+  padding: 30px;
+  max-width: 30%;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.cart > img {
+  /* width: 80%; */
+  max-height: 400px;
+  padding-bottom: 30px;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.cart_title {
+  padding: 0 0 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.cart_description {
+  margin: auto;
+  text-align: center;
+  width: fit-content;
+  display: block;
+  max-width: 300px;
+  color: var(--light-dark);
+}
+
+.cart_price {
+  padding: 10px;
+  font-size: 25px;
+  color: var(--bins);
+  display: block;
+  text-align: center;
+}
+
+.cart_btn {
+  background-color: var(--bins);
+  display: block;
+  max-width: fit-content;
+  margin: 20px auto 0 auto;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart_btn > svg {
+  height: 25px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #c71e1e; /* Deep red color */
+    color: white; /* White text */
     font-weight: bold;
-    transition: all .5s ease-in-out;
-}
-
-.hero-text a:hover{
-    gap: 30px;
-    color: yellow !important;
-}
-
-.hero-text svg{
-    width: 30px;
-}
+    font-size: 14px;
+    padding: 5px 15px;
+    position: relative;
+    text-transform: uppercase;
+  }
