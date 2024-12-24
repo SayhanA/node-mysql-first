@@ -134,5 +134,78 @@ nav button svg {
   color: var(--bins);
 }
 
+footer{
+  padding: 80px 0;
+  background-color: black;
+}
 
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
+.logo-container{
+  width: fit-content;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.logo-container p{
+  max-width: 350px;
+  color: white;
+}
+
+footer .logo{
+  display: flex;
+  align-items: center;
+}
+
+footer .logo a{
+  display: block;
+  text-align: left;
+}
+
+footer .logo img{
+  width: 100px;
+}
+
+footer .logo ul{
+  color: white;
+}
+
+footer .logo-container ul{
+  display: flex;
+  gap: 30px;
+}
+
+footer .logo-container ul img{
+  width: 20px;
+}
+
+.footer_shop{
+  max-width: 400px;
+  color: white;
+}
+
+footer strong{
+  font-size: 20px;
+  color: var(--bins);
+}
+
+footer .footer_shop ul{
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+footer .footer_shop ul a{
+  color: gray;
+  transition: all .1s ease-in-out;
+}
+
+footer .footer_shop ul a:hover{
+  color: white;
+}

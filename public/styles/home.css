@@ -225,12 +225,55 @@
 }
 
 .badge {
-    display: inline-block;
-    background-color: #c71e1e; /* Deep red color */
-    color: white; /* White text */
-    font-weight: bold;
-    font-size: 14px;
-    padding: 5px 15px;
-    position: relative;
-    text-transform: uppercase;
-  }
+  display: inline-block;
+  background-color: #c71e1e; /* Deep red color */
+  color: white; /* White text */
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* shop section */
+.shops {
+  padding: 120px 0;
+  background-color: #171614;
+  color: white;
+}
+
+.shop_content{
+  display: flex;
+}
+
+.shop_details{
+
+}
+
+.shop_details > p{
+  margin-bottom: 40px;
+  line-height: 25px;
+}
+
+.shop_details > strong{
+  font-size: 25px;
+  color: var(--bins);
+}
+
+.shop_details > ul{
+  padding: 20px 0 40px 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.shop_details > ul >li {
+  width: 30%;
+}
+
+.btn{
+  padding: 15px 50px;
+  background-color: var(--bins);
+  color: white;
+  font-weight: bold;
+}
