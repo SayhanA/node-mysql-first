@@ -16,3 +16,28 @@
     line-height: 25px;
     display: block;
 }
+
+.out_stroy{
+    background-color: #171614;
+    padding: 100px 0;
+    color: white;
+}
+
+.out_stroy h2{
+    margin-bottom: 20px;
+    display: block;
+}
+
+.out_stroy:nth-child(2){
+    width: 100%;
+}
+
+.out_stroy p{
+    display: block;
+}
+
+.visit{
+    margin: 50px 0;
+    width: 100%;
+    display: block  ;
+}
