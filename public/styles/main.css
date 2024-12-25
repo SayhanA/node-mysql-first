@@ -83,6 +83,13 @@ nav > div {
   color: white;
 }
 
+.btn {
+  padding: 15px 50px;
+  background-color: var(--bins);
+  color: white;
+  font-weight: bold;
+}
+
 nav > div > ul {
   display: flex;
   gap: 30px;

@@ -150,6 +150,7 @@
 }
 
 .shadow {
+  width: max-content;
   font-size: 170px;
   font-weight: bolder;
   position: absolute;
@@ -159,19 +160,28 @@
   opacity: 0.05;
 }
 
+.recent_products .btn {
+  margin: auto;
+  display: block;
+}
+
 .section_content {
-  padding-top: 30px;
+  width: 100%;
+  padding: 30px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .cart {
   padding: 30px;
-  max-width: 30%;
+  min-width: 30%;
+  max-width: 40%;
   background-color: white;
   color: black;
   border-radius: 10px;
+  flex-grow: 1;
 }
 
 .cart > img {
@@ -242,38 +252,169 @@
   color: white;
 }
 
-.shop_content{
+.shop_content {
   display: flex;
 }
 
-.shop_details{
-
+.shop_details {
 }
 
-.shop_details > p{
+.shop_details > p {
   margin-bottom: 40px;
   line-height: 25px;
 }
 
-.shop_details > strong{
+.shop_details > strong {
   font-size: 25px;
   color: var(--bins);
 }
 
-.shop_details > ul{
+.shop_details > ul {
   padding: 20px 0 40px 0;
   display: flex;
   flex-flow: row wrap;
   gap: 10px;
 }
 
-.shop_details > ul >li {
+.shop_details > ul > li {
   width: 30%;
 }
 
-.btn{
-  padding: 15px 50px;
-  background-color: var(--bins);
+/* Blogs section */
+.blogs {
+  padding: 120px;
+  background-color: #242424;
   color: white;
+}
+
+.section_title {
+  width: 100%;
+}
+
+.blogs_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.blog_cart {
+  width: 30%;
+}
+
+.blog_cart > img {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.blog_cart > img:hover {
+  object-fit: unset;
+}
+
+.blog_cart_title {
+  margin: 20px 0 10px 0;
+  font-size: 25px;
   font-weight: bold;
+  color: var(--bins);
+}
+
+.blog_cart_description {
+}
+
+.blog_cart_details {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.204);
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: capitalize;
+}
+
+.date > p {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--bins);
+}
+
+.blog_ratings {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+.blog_views,
+.blog_comments {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog_views > svg,
+.blog_comments > svg {
+  width: 25px;
+}
+
+.blog_btn {
+  display: block;
+  margin: auto;
+}
+
+/* add_reviews section */
+.add_reviews {
+  padding: 120px 0;
+  color: white;
+  background-color: #171614;
+}
+
+.add_reviews_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.add_reviews_container > div {
+  width: 50%;
+}
+
+.add_reviews_container > div > p {
+  max-width: 500px;
+}
+
+.add_reviews_container > form {
+  width: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.add_reviews_container > form > input,
+.add_reviews_container > form > div > input[type="text"],
+.add_reviews_container > form > textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid rgba(128, 128, 128, 0.519);
+}
+
+.add_reviews_text{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.add_reviews_text > p{
+  line-height: 25px;
+  color: gainsboro;
 }

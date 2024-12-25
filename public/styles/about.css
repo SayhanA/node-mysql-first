@@ -1,0 +1,18 @@
+.welcome_section{
+    background-color: black;
+    color: white;
+    padding: 200px 0 120px 0;
+}
+
+.welcome_section h2{
+    margin: 0 0 30px 0;
+    color: var(--bins);
+    display: block;
+    width: 100%;
+}
+
+.welcome_section p{
+    max-width: 700px;
+    line-height: 25px;
+    display: block;
+}

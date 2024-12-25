@@ -1,0 +1,126 @@
+.menu-hero{
+    padding: 200px 0 120px 0;
+    color: white;
+    background-color: black;
+}
+
+.hero-text> h1{
+    font-size: 50px;
+    color: var(--bins);
+}
+
+.hero-text > p{
+    padding: 30px 0 10px 0;
+    max-width: 700px;
+    line-height: 25px;
+}
+
+.recent_products {
+    width: 100%;
+    padding: 120px 0;
+    color: white;
+    min-height: 100vh;
+    background-color: #242424;
+  }
+  
+  .section_title {
+    margin: auto;
+    position: relative;
+  }
+  
+  .shadow {
+    width: max-content;
+    font-size: 170px;
+    font-weight: bolder;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.05;
+  }
+  
+  .recent_products .btn {
+    margin: auto;
+    display: block;
+  }
+  
+  .section_content {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .cart {
+    padding: 20px;
+    width: 20%;
+    max-width: 40%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    flex-grow: 1;
+  }
+  
+  .cart > img {
+    width: 80%;
+    /* max-height: 400px; */
+    padding-bottom: 30px;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+  .cart_title {
+    padding: 0 0 10px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .cart_description {
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    display: block;
+    max-width: 300px;
+    color: var(--light-dark);
+  }
+  
+  .cart_price {
+    padding: 10px;
+    font-size: 25px;
+    color: var(--bins);
+    display: block;
+    text-align: center;
+  }
+  
+  .cart_btn {
+    background-color: var(--bins);
+    display: block;
+    max-width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 10px 30px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .cart_btn > svg {
+    height: 25px;
+  }
+  
+  .badge {
+    display: inline-block;
+    background-color: #c71e1e; /* Deep red color */
+    color: white; /* White text */
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 15px;
+    position: relative;
+    text-transform: uppercase;
+  }
