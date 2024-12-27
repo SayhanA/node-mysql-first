@@ -57,6 +57,7 @@ const postLogin = (req, res, next) => {
             id: data[0].id,
             email: data[0].email,
             name: data[0].name,
+            status: data[0].status,
           };
 
           res.redirect("/");

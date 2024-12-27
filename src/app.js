@@ -9,6 +9,7 @@ const authRoute = require("./routes/auth");
 const errorRoute = require("./routes/error");
 const session = require("express-session");
 const homeRoute = require("./routes/home");
+const adminRoute = require("./routes/dashboard");
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.set("view engine", "ejs");
 app.set("views", "src/views");
 
+app.use("/dashboard", adminRoute);
 app.use("/", authRoute);
 app.use(homeRoute);
 app.use(errorRoute);

@@ -23,9 +23,9 @@ class Product {
       (this.discount = discount);
   }
 
-  save() {
+  async save() {
     const createTableQuery = `
-      CREATE TABLE IF NOT EXISTS products (
+      CREATE TABLE IF NOT EXISTS coffee-products (
         id VARCHAR(36) PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         description TEXT,
@@ -38,10 +38,12 @@ class Product {
       );
     `;
 
-    const insertData = `INSERT INTO products (id, name, description, price, image, status, created_at, created_by, discount) VALUES (?,?,?,?,?,?,?,?,?);`;
+    const insertData = `INSERT INTO coffee-products (id, name, description, price, image, status, created_at, created_by, discount) VALUES (?,?,?,?,?,?,?,?,?);`;
 
     try {
-      db.execute(insertData, [
+      await db.execute(createTableQuery);
+      
+      await db.execute(insertData, [
         this.id,
         this.name,
         this.description,

@@ -13,6 +13,9 @@
             <li><a class="<%= link==="/menu" ? "active": "" %>" href="/menu">Menu</a></li>
             <li><a class="<%= link==="/about" ? "active": "" %>" href="/about">About Us</a></li>
             <li><a class="<%= link==="/contact" ? "active": "" %>" href="/contact">Contact</a></li>
+            <%if(user?.status === "admin"){%>
+              <li><a class="<%= link==="/dashboard" ? "active": "" %>" href="/dashboard">Dashboard</a></li>
+            <%}%>
         </ul>
         </div>
     <% if (user) { %>
